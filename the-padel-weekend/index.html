@@ -534,9 +534,10 @@
   };
 
   ['scroll', 'resize'].forEach((ev) => window.addEventListener(ev, requestSweep, { passive: true }));
-  ['load', 'pageshow', 'hashchange'].forEach((ev) => window.addEventListener(ev, requestSweep));
-  document.addEventListener('visibilitychange', requestSweep);
+  ['load', 'pageshow', 'hashchange'].forEach((ev) => window.addEventListener(ev, sweep));
+  document.addEventListener('visibilitychange', sweep);
   sweep();
+  setTimeout(sweep, 600);
 </script>
 
 </body>
