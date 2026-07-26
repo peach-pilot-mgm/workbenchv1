@@ -530,7 +530,7 @@
   const requestSweep = () => {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(() => { sweep(); ticking = false; });
+    setTimeout(() => { sweep(); ticking = false; }, 80);
   };
 
   ['scroll', 'resize'].forEach((ev) => window.addEventListener(ev, requestSweep, { passive: true }));
