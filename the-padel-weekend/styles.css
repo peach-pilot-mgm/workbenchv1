@@ -60,12 +60,13 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 }
 .section-head .lede { margin-top: 18px; color: var(--muted); font-size: 1.05rem; max-width: 58ch; }
 
-/* Reveal animation */
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
-.reveal.is-visible { opacity: 1; transform: none; }
+/* Reveal animation — content is only ever hidden while JS is running (html.js) */
+.reveal { transition: opacity .9s var(--ease), transform .9s var(--ease); }
+html.js .reveal:not(.is-visible) { opacity: 0; transform: translateY(26px); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.js .reveal:not(.is-visible) { opacity: 1; transform: none; }
+  .reveal { transition: none; }
   .cover-panel img { animation: none !important; }
 }
 
