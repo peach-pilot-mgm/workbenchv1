@@ -10,7 +10,7 @@
 <meta property="og:title" content="The Padel Weekend · Atlanta to Latin America">
 <meta property="og:description" content="Eight friends. Three cities. One winner. Costa Rica, Panama City and Mexico City compared for the padel trip — Oct 29 to Nov 1, 2026.">
 <meta property="og:url" content="https://peach-pilot-mgm.github.io/workbenchv1/padel-weekend/">
-<meta property="og:image" content="https://peach-pilot-mgm.github.io/workbenchv1/public/images/club-park-and-padel-panama.jpg">
+<meta property="og:image" content="https://peach-pilot-mgm.github.io/workbenchv1/padel-weekend/public/images/club-park-and-padel-panama.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -123,12 +123,18 @@ tbody tr:last-child td{border-bottom:0}
 .btn.gold:hover{background:var(--gold);color:var(--white)}
 .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
 
-.flights{margin:40px 0 8px;background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);padding:22px 26px;border-radius:2px}
+.flights{margin:40px 0 8px;background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);padding:24px 26px;border-radius:2px}
 .flights .eyebrow{color:var(--gold)}
-.flights h4{font-family:var(--serif);font-size:1.15rem;margin:.3em 0 .6em}
-.flights ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:6px 28px}
-.flights li{font-size:.92rem;padding:5px 0;border-bottom:1px dotted var(--line)}
-.flights .rt{font-weight:600;color:var(--green)}
+.flights h4{font-family:var(--serif);font-size:1.2rem;margin:.3em 0 .8em}
+.flt-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px}
+.flt-leg .flt-day{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
+.flt-leg ul{list-style:none;margin:0;padding:0;display:block}
+.flt-leg li{font-size:.92rem;padding:6px 0;border-bottom:1px dotted var(--line)}
+.flt-leg li:last-child{border-bottom:0}
+.flt-leg li.muted{color:var(--muted);font-style:italic;border-bottom:0}
+.flt-leg li b{color:var(--green);font-weight:600}
+.flt-fare{margin-top:18px;border-top:1px solid var(--line);padding-top:14px;font-weight:600;color:var(--green);font-size:1.02rem}
+.flt-fare span{display:block;font-weight:400;color:var(--muted);font-size:.82rem;font-style:italic;margin-top:3px}
 
 .play-head{font-family:var(--serif);font-size:1.5rem;margin:46px 0 4px}
 .play-sub{color:var(--muted);font-size:.92rem;margin-bottom:26px}
@@ -179,6 +185,7 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
 @media(max-width:620px){
   body{font-size:16px}
   .clubs{grid-template-columns:1fr}
+  .flt-grid{grid-template-columns:1fr;gap:18px}
   .hero__montage{flex-wrap:wrap}
   .hero__montage figure{width:calc(50% - 8px)}
   .dest-head{align-items:center}
@@ -208,7 +215,7 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
     <div class="eyebrow hero__eyebrow">Atlanta &rarr; Latin America &nbsp;&middot;&nbsp; 8 friends</div>
     <h1>The Padel Weekend</h1>
     <div class="hero__sub">Three cities. One winner.</div>
-    <div class="hero__dates">October 29 &ndash; November 1, 2026 &nbsp;&middot;&nbsp; Thursday to Sunday</div>
+    <div class="hero__dates">Thursday, October 29 &ndash; Sunday, November 1, 2026</div>
     <div class="hero__meta">8 Friends &nbsp;&middot;&nbsp; 3 Destinations &nbsp;&middot;&nbsp; One Winner</div>
     <div class="hero__note">Padel by day. Great dinners and late nights after.</div>
   </div>
@@ -346,7 +353,7 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
           <li><b>Alvaro lives locally</b> and can help with clubs, restaurants, transportation and access</li>
         </ul>
         <div class="btnrow">
-          <a class="btn solid" href="https://www.marriott.com/en-us/hotels/sjocr-costa-rica-marriott-hotel-hacienda-belen/overview/" target="_blank" rel="noopener">Hotel website</a>
+          <a class="btn solid" href="https://www.tripadvisor.com/Hotel_Review-g309257-d447017-Reviews-Costa_Rica_Marriott_Hotel_Hacienda_Belen-San_Antonio_De_Belen_Province_of_Heredia.html" target="_blank" rel="noopener">Hotel details &amp; reviews</a>
         </div>
       </div>
     </div>
@@ -354,11 +361,22 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
     <div class="flights" data-reveal>
       <div class="eyebrow">Getting there</div>
       <h4>Flights &middot; nonstop on Delta</h4>
-      <ul>
-        <li>Outbound: Delta nonstop &middot; ~9:56 AM ATL &rarr; 12:00 PM SJO</li>
-        <li>Return: Delta nonstop &middot; ~2:25 PM SJO &rarr; 7:32 PM ATL</li>
-        <li class="rt">Round trip: ~$630</li>
-      </ul>
+      <div class="flt-grid">
+        <div class="flt-leg">
+          <div class="flt-day">Depart &middot; Thursday, Oct 29</div>
+          <ul>
+            <li>Delta nonstop &middot; <b>~9:56 AM</b> ATL &rarr; ~12:00 PM SJO</li>
+            <li class="muted">Delta is the only nonstop ATL&ndash;SJO (about one daily); other carriers connect via a hub.</li>
+          </ul>
+        </div>
+        <div class="flt-leg">
+          <div class="flt-day">Return &middot; Sunday, Nov 1</div>
+          <ul>
+            <li>Delta nonstop &middot; <b>~2:25 PM</b> SJO &rarr; ~7:32 PM ATL</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flt-fare">Round trip from ~$630 per person<span>Nonstop &middot; ~4h each way &middot; fares vary with booking date.</span></div>
     </div>
 
     <h3 class="play-head" data-reveal>Three places to play</h3>
@@ -388,8 +406,8 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
           <div class="tags"><span class="tag">Organized play</span><span class="tag">Coaching</span><span class="tag">Food</span><span class="tag">Social space</span></div>
           <div class="drive"><span class="big">22&ndash;32 min &middot; ~10 miles</span><span class="cav">Estimate &mdash; traffic can change this materially.</span></div>
           <div class="btnrow">
-            <a class="btn" href="https://www.instagram.com/reservasportsclub/" target="_blank" rel="noopener">Club page</a>
-            <a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Costa+Rica+Marriott+Hotel+Hacienda+Belen&amp;destination=Reserva+Sports+and+Social+Club+Costa+Rica&amp;travelmode=driving" target="_blank" rel="noopener">Live directions</a>
+            <a class="btn" href="https://clubreservacr.com/" target="_blank" rel="noopener">Club website</a>
+            <a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Costa+Rica+Marriott+Hotel+Hacienda+Belen&amp;destination=Reserva+Sports+and+Social+Club+Escazu+Costa+Rica&amp;travelmode=driving" target="_blank" rel="noopener">Live directions</a>
           </div>
         </div>
       </article>
@@ -403,7 +421,7 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
           <div class="tags"><span class="tag">Covered courts</span><span class="tag">Panoramic</span><span class="tag">Academy</span><span class="tag">Rentals</span></div>
           <div class="drive"><span class="big">35&ndash;50 min &middot; ~17 miles</span><span class="cav">Estimate &mdash; traffic can change this materially.</span></div>
           <div class="btnrow">
-            <a class="btn" href="https://puropadelcr.com/" target="_blank" rel="noopener">Club / booking</a>
+            <a class="btn" href="https://puropadelcr.com/" target="_blank" rel="noopener">Club website</a>
             <a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Costa+Rica+Marriott+Hotel+Hacienda+Belen&amp;destination=Puro+Padel+Aleste+Curridabat&amp;travelmode=driving" target="_blank" rel="noopener">Live directions</a>
           </div>
         </div>
@@ -440,21 +458,31 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
           <li><b>Best overall price</b> of the three</li>
         </ul>
         <div class="btnrow">
-          <a class="btn solid" href="https://www.marriott.com/en-us/hotels/ptyak-sortis-hotel-spa-and-casino-autograph-collection/overview/" target="_blank" rel="noopener">Hotel website</a>
+          <a class="btn solid" href="https://www.tripadvisor.com/Hotel_Review-g294480-d6981895-Reviews-Sortis_Hotel_Spa_Casino_Autograph_Collection-Panama_City_Panama_Province.html" target="_blank" rel="noopener">Hotel details &amp; reviews</a>
         </div>
       </div>
     </div>
 
     <div class="flights" data-reveal>
       <div class="eyebrow">Getting there</div>
-      <h4>Flights &middot; Delta or Copa</h4>
-      <ul>
-        <li>Delta &middot; ~9:52 AM ATL &rarr; 12:59 PM PTY</li>
-        <li>Copa &middot; ~5:16 PM ATL &rarr; 8:31 PM PTY</li>
-        <li>Return Copa &middot; ~10:00 AM PTY &rarr; 2:17 PM ATL</li>
-        <li>Return Delta &middot; ~3:24 PM PTY &rarr; 7:39 PM ATL</li>
-        <li class="rt">Round trip: ~$556&ndash;$616 depending on itinerary</li>
-      </ul>
+      <h4>Flights &middot; nonstop on Delta &amp; Copa</h4>
+      <div class="flt-grid">
+        <div class="flt-leg">
+          <div class="flt-day">Depart &middot; Thursday, Oct 29</div>
+          <ul>
+            <li>Delta &middot; <b>~9:52 AM</b> ATL &rarr; ~12:59 PM PTY</li>
+            <li>Copa &middot; <b>~5:16 PM</b> ATL &rarr; ~8:31 PM PTY</li>
+          </ul>
+        </div>
+        <div class="flt-leg">
+          <div class="flt-day">Return &middot; Sunday, Nov 1</div>
+          <ul>
+            <li>Copa &middot; <b>~10:00 AM</b> PTY &rarr; ~2:17 PM ATL</li>
+            <li>Delta &middot; <b>~3:24 PM</b> PTY &rarr; ~7:39 PM ATL</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flt-fare">Round trip ~$556&ndash;$616 per person<span>Nonstop &middot; ~3.5h each way &middot; price depends on the Delta/Copa mix and booking date.</span></div>
     </div>
 
     <h3 class="play-head" data-reveal>Three places to play</h3>
@@ -499,7 +527,7 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
           <div class="tags"><span class="tag">Covered courts</span><span class="tag">Organized play</span><span class="tag">Coaching</span><span class="tag">Lounge</span></div>
           <div class="drive"><span class="big">10&ndash;16 min &middot; ~3.5 miles</span><span class="cav">Estimate &mdash; traffic can change this materially.</span></div>
           <div class="btnrow">
-            <a class="btn" href="https://proplay-pan.matchpoint.com.es/Pages/12-PROPLAY_PADEL_CLUB" target="_blank" rel="noopener">Club / booking</a>
+            <a class="btn" href="https://www.proplaypa.com/" target="_blank" rel="noopener">Club website</a>
             <a class="btn gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Sortis+Hotel+Panama&amp;destination=ProPlay+Panama+Paitilla&amp;travelmode=driving" target="_blank" rel="noopener">Live directions</a>
           </div>
         </div>
@@ -536,18 +564,33 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
           <li><b>Strongest dining destination</b> &mdash; most expensive only because of airfare</li>
         </ul>
         <div class="btnrow">
-          <a class="btn solid" href="https://www.marriott.com/en-us/hotels/mexis-sheraton-maria-isabel-mexico-city-reforma/overview/" target="_blank" rel="noopener">Hotel website</a>
+          <a class="btn solid" href="https://www.tripadvisor.com/Hotel_Review-g150800-d152468-Reviews-Sheraton_Maria_Isabel_Mexico_City_Reforma-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_blank" rel="noopener">Hotel details &amp; reviews</a>
         </div>
       </div>
     </div>
 
     <div class="flights" data-reveal>
       <div class="eyebrow">Getting there</div>
-      <h4>Flights &middot; Delta</h4>
-      <ul>
-        <li>Multiple Delta options, ATL &harr; MEX</li>
-        <li class="rt">Round trip: ~$1,200</li>
-      </ul>
+      <h4>Flights &middot; nonstop on Delta (about 5 daily)</h4>
+      <div class="flt-grid">
+        <div class="flt-leg">
+          <div class="flt-day">Depart &middot; Thursday, Oct 29 &mdash; pick your time</div>
+          <ul>
+            <li>Delta &middot; <b>~8:00 AM</b> ATL &rarr; ~10:15 AM MEX</li>
+            <li>Delta &middot; <b>~9:56 AM</b> ATL &rarr; ~12:50 PM MEX</li>
+            <li>Delta &middot; <b>~12:10 PM</b> ATL &rarr; ~1:55 PM MEX</li>
+            <li>Delta &middot; <b>~5:00 PM</b> ATL &rarr; ~6:45 PM MEX</li>
+          </ul>
+        </div>
+        <div class="flt-leg">
+          <div class="flt-day">Return &middot; Sunday, Nov 1</div>
+          <ul>
+            <li>Several daily Delta nonstops, <b>morning through evening</b> MEX &rarr; ATL</li>
+            <li class="muted">Choose the return that best fits the last day&rsquo;s plans.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flt-fare">Round trip from ~$1,200 per person<span>Nonstop &middot; ~3h each way &middot; times are typical Delta departures and fares vary with booking date.</span></div>
     </div>
 
     <h3 class="play-head" data-reveal>Three places to play</h3>
@@ -623,7 +666,7 @@ footer .fnote{margin-top:20px;font-size:.8rem;opacity:.6}
   <div class="wrap">
     <div class="eyebrow">The Padel Weekend &middot; 2026</div>
     <h3>A private travel edit for the Atlanta group.</h3>
-    <p>Atlanta &rarr; Latin America &nbsp;&middot;&nbsp; October 29 &ndash; November 1, 2026 &nbsp;&middot;&nbsp; 8 friends &middot; 3 destinations &middot; one winner.</p>
+    <p>Atlanta &rarr; Latin America &nbsp;&middot;&nbsp; Thursday, October 29 &ndash; Sunday, November 1, 2026 &nbsp;&middot;&nbsp; 8 friends &middot; 3 destinations &middot; one winner.</p>
     <p class="fnote">Prices, flight times and drive times are planning estimates and will vary with booking date and traffic. Confirm live details before booking.</p>
   </div>
 </footer>
